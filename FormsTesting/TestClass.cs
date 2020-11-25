@@ -34,7 +34,8 @@ namespace FormsTesting
 
             return count;
         }
-        public List<object> Page(int startRowIndex, int limit, string keyword, Dictionary<string,string> filters, Dictionary<string, string> Sorting)
+
+        public List<object> Search(string keyword, Dictionary<string, string> filters, Dictionary<string, string> Sorting)
         {
             keyword = keyword.ToLower();
             List<object> list;
@@ -154,26 +155,10 @@ namespace FormsTesting
                         break;
                 }
             }
-                list = tcList.Cast<object>().ToList();
-            return list.Skip(startRowIndex).Take(limit).ToList();
-        }
-        public List<object> Search(string keyword)
-        {
-            keyword = keyword.ToLower();
-            List<object> res = db.TestClasses.Where(x => x.Name.ToLower().Contains(keyword) || x.Value.ToString().ToLower().Contains(keyword) || x.Bar.ToString().ToLower().Contains(keyword) || x.Foo.ToString().ToLower().Contains(keyword)).Cast<object>().ToList();
-            return res;
-        }
 
-        public List<object> Next()
-        {
-            throw new NotImplementedException();
+            list = tcList.Cast<object>().ToList();
+            return list.ToList();
         }
-        public List<object> Previous()
-        {
-            throw new NotImplementedException();
-        }
-
-
         public void InitDb() 
         {
             db = new Database();

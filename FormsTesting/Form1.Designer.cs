@@ -35,10 +35,10 @@
             // 
             this.sgpControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sgpControl1.Location = new System.Drawing.Point(0, 0);
+            this.sgpControl1.MinimumSize = new System.Drawing.Size(410, 0);
             this.sgpControl1.Name = "sgpControl1";
             this.sgpControl1.Size = new System.Drawing.Size(978, 578);
             this.sgpControl1.TabIndex = 0;
-            this.sgpControl1.Load += new System.EventHandler(this.sgpControl1_Load);
             // 
             // Form1
             // 

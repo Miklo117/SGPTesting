@@ -25,9 +25,6 @@ namespace FormsTesting
 
         }
 
-        private void sgpControl1_Load(object sender, EventArgs e)
-        {
-        }
 
     }
 }
