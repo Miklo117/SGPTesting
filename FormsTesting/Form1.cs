@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using SGPControlLibrary;
+
+namespace FormsTesting
+{
+    public partial class Form1 : Form
+    {
+        TestClass dataList;
+        public Form1()
+        {
+            InitializeComponent();
+            dataList = new TestClass();
+            dataList.InitDb();
+            //dataList.pro;
+            sgpControl1.DataSource = dataList;
+            MinimumSize = new Size(sgpControl1.MinimumSize.Width + 15, sgpControl1.MinimumSize.Height);
+
+        }
+
+        private void sgpControl1_Load(object sender, EventArgs e)
+        {
+        }
+
+    }
+}
+
+
