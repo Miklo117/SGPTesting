@@ -19,14 +19,11 @@ namespace FormsTesting
             InitializeComponent();
             dataList = new TestClass();
             dataList.InitDb();
-            //dataList.pro;
+            
             sgpControl1.HiddenColumns.Add("Id");
             sgpControl1.DataSource = dataList;
             MinimumSize = new Size(sgpControl1.MinimumSize.Width + 15, sgpControl1.MinimumSize.Height);
-
         }
-
-
     }
 }
 
