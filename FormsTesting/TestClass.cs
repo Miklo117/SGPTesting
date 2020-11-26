@@ -157,9 +157,27 @@ namespace FormsTesting
             list = tcList.Cast<object>().ToList();
             return list.ToList();
         }
+
         public void InitDb() 
         {
             db = new Database();
+        }
+
+        public bool Delete(Guid Id)
+        {
+            try
+            {
+                TestClass ItemToRemove = db.TestClasses.FirstOrDefault(x => x.Id == Id);
+                if (ItemToRemove == null)
+                {
+                    return false;
+                }
+                return db.TestClasses.Remove(ItemToRemove); ;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
