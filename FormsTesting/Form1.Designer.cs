@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.sgpControl1 = new SGPControlLibrary.SGPControl();
             this.SuspendLayout();
             // 
             // sgpControl1
             // 
+            this.sgpControl1.DataSource = null;
             this.sgpControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sgpControl1.HiddenColumns = ((System.Collections.Generic.List<string>)(resources.GetObject("sgpControl1.HiddenColumns")));
             this.sgpControl1.Location = new System.Drawing.Point(0, 0);
